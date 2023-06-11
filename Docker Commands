@@ -1,0 +1,56 @@
+Most Commonly used docker commands
+
+Creating and Managing Containers
+
+    # To list all the running containers
+    docker ps
+
+    # To list all the containers
+    docker ps -a
+
+    # To create and start a new container from a Docker image
+    docker run <imagename>
+
+    # To create and start a new container in background from a Docker image
+    docker run -d <imagename>
+
+    # To stop a container
+    docker stop <container_id>
+
+    # To restart the stopped container
+    docker restart <container_id>
+
+    # To remove a stopped container
+    docker rm <container_id>
+
+    # To execute a command inside a running container
+    docker exec
+
+    Example : docker exec -it <container_id>
+
+Managing Docker Images
+
+    # To build a docker image from a Dockerfile
+    docker build
+    Example: docker build -t my_image .
+
+    # To pull an image
+    docker pull
+    Example: docker pull redis
+
+    # To upload a docker image
+    docker push
+    Example: docker push <imagename>
+
+    # To list all the Docker images
+    docker images
+
+    # To remove a Docker image from the local system
+    docker rmi <imagename>
+
+
+Miscellaneous commands
+
+    # To manage multi-container Docker applications using a YAML file.
+    docker-compose
+    Example: docker-compose up -d
